@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+html, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.login-box {
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #3897f0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.login-footer {
+    margin-top: 20px;
+}
+
+.login-footer p {
+    font-size: 14px;
+}
+
+.login-footer a {
+    color: #3897f0;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.chat-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #7289DA;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-container h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo das mensagens enviadas (à direita) */
+.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px 0 10px 10px;
+    margin: 5px 0;
+    max-width: 75%;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Estilo das mensagens recebidas (à esquerda) */
+.received {
+    align-self: flex-start;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 0 10px 10px 10px;
+    margin: 5px 0;
+    max-width: 75%;
+    font-size: 14px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+/* Data/hora no canto inferior das mensagens */
+.sent::after, .received::after {
+    content: attr(data-time);
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    bottom: -18px;
+    right: 10px;
+}
+
+/* Campo de input para enviar mensagens */
+#mensagem {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Botão de enviar mensagens */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #5865F2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

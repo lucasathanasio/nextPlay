@@ -1,0 +1,266 @@
+/* Estilo básico do corpo da página */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container da página de login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Caixa de login */
+.login-box {
+    width: 100%;
+    padding: 40px 20px; /* Mais espaçamento interno */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+}
+
+/* Estilo do título da página de login */
+.login-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilo dos inputs */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Espaçamento entre os inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #3897f0;
+    outline: none;
+}
+
+/* Estilo do botão de login */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3897f0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 10px; /* Espaçamento entre o último input e o botão */
+}
+
+button[type="submit"]:hover {
+    background-color: #318ae0;
+}
+
+/* Mensagem de erro */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Rodapé do login com link para cadastro */
+.login-footer {
+    margin-top: 30px;
+}
+
+.login-footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.login-footer a {
+    color: #3897f0;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Container principal do chat */
+.chat-container {
+    max-width: 600px;
+    width: 100%;
+    height: 90vh; /* Garante que a altura do chat ocupe 90% da altura da viewport */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nome da pessoa com quem você está conversando */
+.chat-container h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Área de mensagens com altura fixa e barra de rolagem interna */
+.messages {
+    flex-grow: 1; /* Faz a área de mensagens crescer para ocupar o espaço vertical disponível */
+    overflow-y: auto; /* Barra de rolagem automática */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+/* Estilo das mensagens enviadas (à direita) */
+.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px 0 10px 10px;
+    margin: 5px 0;
+    max-width: 75%;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Estilo das mensagens recebidas (à esquerda) */
+.received {
+    align-self: flex-start;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 0 10px 10px 10px;
+    margin: 5px 0;
+    max-width: 75%;
+    font-size: 14px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+/* Campo de input para enviar mensagens */
+#mensagem {
+    width: calc(100% - 110px); /* Garante que o campo de mensagem preencha o espaço */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Botão de enviar mensagens */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #128c7e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #075e54;
+}
+
+/* Container de botões de Sair e Voltar */
+.button-group {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do botão de Sair e Voltar */
+.logout-button, .back-button {
+    width: 100px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logout-button:hover, .back-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Especificamente para o botão "Voltar" */
+.back-button {
+    background-color: #007bff;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste para o rodapé e input na parte inferior */
+form {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: auto; /* Fixa o campo de mensagem e botão na parte inferior */
+}
+
+/* Estilo das mensagens com hora */
+.sent::after, .received::after {
+    content: attr(data-time);
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    bottom: -18px;
+    right: 10px;
+}
+
+/* Estilo básico para input de texto e campos de formulário */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    font-size: 14px;
+}
+
+/* Botão padrão */
+button {
+    padding: 10px 20px;
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #318ae0;
+}

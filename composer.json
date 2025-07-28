@@ -1,0 +1,11 @@
+{
+    "name": "leandro/tcc-atanas",
+    "autoload": {
+        "psr-4": {
+            "Leandro\\TccAtanas\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
