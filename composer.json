@@ -1,0 +1,11 @@
+{
+    "name": "nextplay/app",
+    "autoload": {
+        "psr-4": {
+            "NextPlay\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

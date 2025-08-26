@@ -1,0 +1,26 @@
+CREATE DATABASE chat;
+
+USE chat;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE messages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  remetente_id INT NOT NULL,
+  destinatario_id INT NOT NULL,
+  mensagem TEXT NOT NULL,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (remetente_id) REFERENCES users(id),
+  FOREIGN KEY (destinatario_id) REFERENCES users(id)
+);
+
+INSERT INTO users (nome, email, senha) VALUES 
+('Enzo Oliveira', 'enzo@example.com', PASSWORD('senha123')),
+('Vanessa Lima', 'vanessa@example.com', PASSWORD('senha123')),
+('Laura  Dias', 'carla@example.com', PASSWORD('senha123')),
+(' Maria santos ', 'anne@example.com', PASSWORD('senha123'));
