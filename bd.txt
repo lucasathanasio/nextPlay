@@ -20,22 +20,24 @@ CREATE TABLE IF NOT EXISTS postnormal (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Tabela de Post dos Jogos
-CREATE TABLE postjogo(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    id_criador INT,
-    jogo VARCHAR(255) NOT NULL,
+-- Tabela de Post de Jogos
+CREATE TABLE IF NOT EXISTS postjogo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    jogo_id INT NOT NULL,
+    id_criador INT NOT NULL,
+    descricao TEXT,
     horario TIME NOT NULL,
     max_jogadores INT NOT NULL,
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_criador) REFERENCES users(id)
+    FOREIGN KEY (jogo_id) REFERENCES jogos(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_criador) REFERENCES users(id) ON DELETE CASCADE
 );
 
 -- Tabela de Participantes da Partida
 CREATE TABLE participantepartida (
     id_partida INT,
     id_usuario INT,
-    PRIMARY KEY (id_partida, user_id),
+    PRIMARY KEY (id_partida, id_usuario),
     FOREIGN KEY (id_partida) REFERENCES postjogo(id),
     FOREIGN KEY (id_usuario) REFERENCES users(id)
 );
