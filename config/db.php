@@ -1,20 +1,15 @@
 <?php
 
-$localhost = "45.152.44.154";
-$dbname = "u451416913_2024grupo25";
-$username = "u451416913_2024grupo25";
-$pass = 'Grupo25@123';
-// $port = 3366
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "nextplay";
 
-
-try{
-
-    $pdo = new PDO("mysql:host=45.152.44.154;dbname=u451416913_2024grupo25" , $username, $pass);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-}catch(PDOException $e){
+} catch (PDOException $e) {
     echo "ERRO: " . $e->getMessage();
 }
-
-
+    
 ?>
