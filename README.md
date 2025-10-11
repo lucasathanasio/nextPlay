@@ -1,8 +1,12 @@
 <h1> nextPlay 🎮 </h1>
 
-Projeto final do curso Técnico em Informática do UNASP Hortolândia - 2024
+Trabalho de Conclusão de Curso (TCC) do curso Técnico em Informática do UNASP Hortolândia - 2024
 
 <hr/>
+
+<h2>Tecnologias usadas</h2>
+
+[![My Skills](https://skillicons.dev/icons?i=php,mysql,bootstrap,js,html,css)](https://skillicons.dev)
 
 <h2>Sobre o projeto</h2>
 O NextPlay é uma rede social voltada para gamers, desenvolvida com foco em conectar jogadores que buscam companheiros para partidas online.  
@@ -35,49 +39,42 @@ Para executar o NextPlay no seu computador, siga os passos abaixo:
 
 <ol>
   <li>
-    <b>Instale o XAMPP</b> (ou outro servidor PHP) com Apache e MySQL, e também o <b>Composer</b>.
+    <b>Instale o XAMPP</b> (ou outro servidor PHP) com Apache e MySQL.
+    <br><br>
   </li>
   <li>
     <b>Copie os arquivos do projeto</b> para a pasta do servidor local:
     <ul>
       <li>Exemplo no XAMPP: <code>C:\xampp\htdocs\nextPlay</code></li>
+      <br>
     </ul>
   </li>
   <li>
     <b>Inicie o Apache e o MySQL</b> pelo XAMPP Control Panel.
+    <br><br>
   </li>
   <li>
     <b>Crie o banco de dados</b> no phpMyAdmin:
     <ul>
       <li>Nome do banco sugerido: <code>nextplay</code></li>
-      <li>Importe o arquivo SQL do projeto, caso exista, ou crie manualmente as tabelas.</li>
+      <li>Importe o arquivo SQL do projeto, localizado em <code>nextPlay/db/db.sql</code>, ou crie manualmente as tabelas.</li>
     </ul>
+    <br>
   </li>
   <li>
-    <b>Configure a conexão com o banco</b> em <code>config.php</code> ou <code>db.php</code>:
+    <b>Confira se a conexão com o banco está correta</b> em <code>nextplay/config/config.php</code>:
     <pre><code>$host = "localhost";
 $user = "root";       // padrão XAMPP
 $pass = "";           // padrão XAMPP
 $db   = "nextplay";</code></pre>
   </li>
   <li>
-    <b>Instale as dependências do PHP</b> usando o Composer:
-    <pre><code>cd C:\xampp\htdocs\nextPlay
-composer install</code></pre>
-    Isso irá instalar o PHPMailer e gerar o autoload automático das classes.
-  </li>
-  <li>
     <b>Permissões de pastas</b>: verifique se as pastas <code>uploads/</code>, <code>profile_pics/</code> e <code>files/</code> permitem escrita.
+    <br><br>
   </li>
   <li>
     <b>Abra o navegador</b> e acesse:
     <pre><code>http://localhost/nextPlay/</code></pre>
     O sistema deve carregar normalmente.
-  </li>
-  <li>
-    <b>Configuração de e-mails</b> (opcional para testes):
-    <ul>
-      <li>Configure o PHPMailer no arquivo responsável pelo envio de e-mails com SMTP ou use um servidor de testes local como o <a href="https://github.com/mailhog/MailHog">MailHog</a>.</li>
-    </ul>
   </li>
 </ol>
