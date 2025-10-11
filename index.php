@@ -124,7 +124,7 @@
             padding-top: 80px;
             position: relative;
             overflow: hidden;
-            background-image: url('img/player.jpg'); /* Define a imagem como background */
+            background-image: url('assets/img/player.jpg'); /* Define a imagem como background */
             background-size: cover;
             background-position: center;
             text-align: center; /* Centraliza o texto */
@@ -540,8 +540,8 @@
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#features">Funcionalidades</a></li>
                 <li><a href="#plans">Planos</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="register.php" class="btn">Experimente Agora</a></li>
+                <li><a href="app/views/login.php">Login</a></li>
+                <li><a href="app/views/register.php" class="btn">Experimente Agora</a></li>
             </ul>
         </nav>
     </header>
@@ -551,7 +551,7 @@
             <div class="hero-content">
                 <h1>Revolucione sua vida social online</h1>
                 <p>NextPlay é a rede social do futuro, onde inovação e diversão se encontram para criar experiências únicas de conexão.</p>
-                <a href="register.php" class="btn">Cadastre-se gratuitamente</a>
+                <a href="app/views/register.php" class="btn">Cadastre-se gratuitamente</a>
             </div>
         </section>
 
@@ -765,6 +765,5 @@
     });
     </script>
 
-    <?php include 'views/footer.php';
-    ?>
+    <?php include 'app/views/footer.php'; ?>
 </body>
